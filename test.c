@@ -86,20 +86,20 @@ static void free_student_info(Student *stu)
 
 static void set_student_info(Student *stu)
 {
-    const char *id = "2013111011";
-    const char *name = "Anker";
+    const char *id = "421123199008267632";
+    const char *name = "Wencai Dong";
     const char *gender = "male";
     const char *object = "computer";
     const char *address = "shen zheng";
-    const char *phone = "0102345678";
+    const char *phone = "13409879163";
     
-    strncpy(stu->id, id, ID_LEN);
-    strncpy(stu->name, name, NAME_LEN);
-    strncpy(stu->gender, gender, GENDER_LEN);
+    strncpy(stu->id, id, strlen(id));
+    strncpy(stu->name, name, strlen(name));
+    strncpy(stu->gender, gender, strlen(gender));
     stu->age = 23;
-    strncpy(stu->object, object, OBJECT_LEN);
-    strncpy(stu->home_address, address, HOME_ADDR_LEN);
-    strncpy(stu->phone, phone, PHONE_LEN);
+    strncpy(stu->object, object, strlen(object));
+    strncpy(stu->home_address, address, strlen(address));
+    strncpy(stu->phone, phone, strlen(phone));
 }
 
 void print_student_info(Student *stu)
